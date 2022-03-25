@@ -1,6 +1,6 @@
 package teht4observer;
 
-public class ClockObserver implements Observer {
+public class AnalogClock implements Observer {
     private String time;
 
     @Override
@@ -13,6 +13,6 @@ public class ClockObserver implements Observer {
 
     @Override
     public String toString() {
-        return time;
+        return "Kello on " + time;
     }
 }

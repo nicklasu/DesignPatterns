@@ -2,19 +2,29 @@ package teht4observer;
 
 public class Main {
     public static void main(String[] args) {
-        ClockObserver simo = new ClockObserver();
-        ClockObserver fullstackDeveloper = new ClockObserver();
-        DigitalClock casioClock = new DigitalClock();
+        ClockTimer clockTimer = new ClockTimer();
+        DigitalClock casio = new DigitalClock();
+        AnalogClock simo = new AnalogClock();
+        clockTimer.setObserver(casio);
+        clockTimer.setObserver(simo);
 
-        casioClock.setObserver(simo);
-        casioClock.setObserver(fullstackDeveloper);
-
-        for(int i = 0; i < 82800; i++){
-            casioClock.tick();
-            System.out.println(simo);
+        //23 tuntia...
+        for (int i = 0; i < 82800; i++) {
+            clockTimer.tick();
         }
-
-        System.out.println(fullstackDeveloper);
-
+        Runnable runnable = () -> {
+            while (true) {
+                try {
+                    Thread.sleep(1000);
+                    clockTimer.tick();
+                    System.out.println(casio);
+                    System.out.println(simo + ". Aika mennä nukkumaan.");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        Thread thread = new Thread(runnable);
+        thread.start();
     }
 }
