@@ -2,7 +2,7 @@ package teht8templatemethod;
 
 class Monopoly extends Game {
 
-    
+
     /* Implementation of necessary concrete methods */
     void initializeGame() {
         // ...
