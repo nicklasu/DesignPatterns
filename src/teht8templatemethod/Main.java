@@ -3,6 +3,6 @@ package teht8templatemethod;
 public class Main {
     public static void main(String[] args) {
         BlackJack blackJack = new BlackJack();
-        blackJack.initializeGame();
+        blackJack.playOneGame(2);
     }
 }

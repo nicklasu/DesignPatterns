@@ -78,7 +78,7 @@ public class BlackJack extends Game {
                 }
             }
         }
-        printWinner();
+       // printWinner();
         return true;
     }
 
@@ -86,6 +86,6 @@ public class BlackJack extends Game {
     void printWinner() {
         System.out.println("My cards: " + player + ". House cards: " + house);
         System.out.println("Winner is: " + winner + "\n");
-        initializeGame();
+        //initializeGame();
     }
 }
