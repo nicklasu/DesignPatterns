@@ -1,17 +1,19 @@
 package teht10chainofresponsibility;
 
 public abstract class Coordinator {
-    public static int LÄHI = 0;
-    public static int PÄÄLLIKKÖ = 1;
+    public static double LÄHI = 1.02;
+    public static double PÄÄLLIKKÖ = 1.05;
 
-    private int level;
+    private double level;
 
     private Coordinator nextCoordinator;
-    public void setNextCoordinator(Coordinator nextCoordinator){
+
+    public void setNextCoordinator(Coordinator nextCoordinator) {
         this.nextCoordinator = nextCoordinator;
     }
-    public void acceptPayRaise(int level){
-        if(this.level >= level){
+
+    public void acceptPayRaise(double level) {
+        if (this.level >= level) {
             //Do the pay raise
         } else {
             this.nextCoordinator.acceptPayRaise(level);
