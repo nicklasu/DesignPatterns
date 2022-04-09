@@ -3,15 +3,7 @@ package teht10chainofresponsibility;
 public abstract class Worker {
     private double pay;
 
-    private void doPayRaise(double level) {
-        this.pay *= level;
-    }
+    public abstract void demandPayRaise(Teamleader teamleader, double payRaise);
 
-    private double demandPayRaise(){
-        return 0;
-    }
-
-    private double getPay() {
-        return pay;
-    }
+    public abstract double getPay();
 }
