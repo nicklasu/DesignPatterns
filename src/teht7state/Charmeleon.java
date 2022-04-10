@@ -10,7 +10,7 @@ public class Charmeleon extends PokemonState {
 
     @Override
     public void evolve(Pokemon pokemon) {
-        pokemon.nextState(new Charmander(pokemon));
+        pokemon.nextState(new Charizard(pokemon));
     }
 
     @Override

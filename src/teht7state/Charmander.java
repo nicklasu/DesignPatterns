@@ -1,15 +1,15 @@
 package teht7state;
 
 public class Charmander extends PokemonState {
-    private int level;
+    private int level = 1;
 
     Charmander(Pokemon pokemon) {
         super(pokemon);
-        level = pokemon.getState().getLevel();
     }
 
     @Override
     public void evolve(Pokemon pokemon) {
+        pokemon.nextState(new Charmeleon(pokemon));
     }
 
     @Override
@@ -19,14 +19,12 @@ public class Charmander extends PokemonState {
 
     @Override
     public void grind() {
-        System.out.println("used INFERNO!");
-        if (level < 100) {
-            level++;
-        }
+        System.out.println("used EMBER!");
+        level++;
     }
 
     @Override
     public String toString() {
-        return "Charmander, level " + level;
+        return "Charizard, level " + level;
     }
 }

@@ -1,7 +1,7 @@
 package teht7state;
 
 public class Pokemon {
-    private PokemonState pokemonState = new Charizard(this);
+    private PokemonState pokemonState = new Charmander(this);
 
     public void nextState(PokemonState pokemonState) {
         this.pokemonState = pokemonState;
