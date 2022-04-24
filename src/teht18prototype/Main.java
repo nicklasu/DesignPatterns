@@ -7,5 +7,8 @@ public class Main {
         System.out.println(kello.naytaAika());
         Kello kello2 = kello.clone();
         System.out.println(kello2.naytaAika());
+        kello2.asetaAika(12, 30, 14);
+        System.out.println(kello2.naytaAika());
+        System.out.println(kello.naytaAika());
     }
 }
